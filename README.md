@@ -44,19 +44,19 @@ docker run --rm \
     laravelsail/php81-composer:latest \
     composer install --ignore-platform-reqs
 ```
-4. Generate app key
+4. Jalankan app & container
+```
+sail up -d
+```
+5. Generate app key
 ```
 sail artisan key:generate
 ```
-5. Jalankan migration beserta seedernya
+6. Jalankan migration beserta seedernya
 ```
 sail artisan migrate --seed
 ```
-6. Jalankan perintah storage symbolic link
+7. Jalankan perintah storage symbolic link
 ```
 sail artisan storage:link
-```
-7. Jalankan app
-```
-sail up -d
 ```
